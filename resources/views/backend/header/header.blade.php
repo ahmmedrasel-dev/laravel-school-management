@@ -12,7 +12,10 @@
     
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="{{ asset('backend/assets/') }}/css/vendors_css.css">
-	  
+	
+  {{-- Twister Alert Css --}}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+
 	<!-- Style-->  
 	<link rel="stylesheet" href="{{ asset('backend/assets/') }}/css/style.css">
 	<link rel="stylesheet" href="{{ asset('backend/assets/') }}/css/skin_color.css">

@@ -25,17 +25,17 @@
           </a>
         </li>  
 		
-        <li class="treeview">
+        <li class="treeview @yield('user_active')">
           <a href="#">
             <i data-feather="message-circle"></i>
-            <span>Application</span>
+            <span>User Management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
-            <li><a href="calendar.html"><i class="ti-more"></i>Calendar</a></li>
+            <li ><a href="{{ route('users.view') }}"><i class="ti-more"></i>All Users</a></li>
+            <li><a href="{{ route('users.create') }}"><i class="ti-more"></i>Create Users</a></li>
           </ul>
         </li> 
 		  
@@ -72,5 +72,4 @@
 
       </ul>
     </section>
-	
   </aside>
