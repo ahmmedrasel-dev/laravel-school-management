@@ -64,12 +64,22 @@ class UserController extends Controller
     $users->user_type = $request->role;
     $users->name = $request->name;
     $users->email = $request->email;
-    $users->password = bcrypt($request->password);
     $users->save();
 
     $notication = array(
       'message' => 'User Updated Succesfully',
       'alert-type' => 'success',
+    );
+    return back()->with($notication);
+  }
+
+  public function user_delete($id)
+  {
+    User::findOrFail($id)->delete();
+
+    $notication = array(
+      'message' => 'User Deleted Succesfully',
+      'alert-type' => 'danger',
     );
     return back()->with($notication);
   }

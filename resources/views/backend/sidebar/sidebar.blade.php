@@ -38,6 +38,20 @@
             <li><a href="{{ route('users.create') }}"><i class="ti-more"></i>Create Users</a></li>
           </ul>
         </li> 
+		
+        <li class="treeview @yield('profile_active')">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Manage Profile</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="@yield('subprofile_active')"><a href="{{ route('users.profile.view') }}"><i class="ti-more"></i>Your Profile</a></li>
+            <li class="@yield('subpassword_active')"><a href="{{ route('users.create') }}"><i class="ti-more"></i>Change Password</a></li>
+          </ul>
+        </li> 
 		  
         <li class="treeview">
           <a href="#">

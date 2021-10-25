@@ -19,6 +19,37 @@
 	<script src="{{ asset('backend/assets/') }}/vendor_components/apexcharts-bundle/irregular-data-series.js"></script>
 	<script src="{{ asset('backend/assets/') }}/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
 
+  {{-- Sweet Alert --}}
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    $(function(){
+        // add #delete in anchore tag
+        $(document).on('click','#delete',function(e){
+            e.preventDefault();
+            var link =$(this).attr('href');
+            Swal.fire({
+            title: 'Are you sure?',
+            text: "Remove These Product From Cart!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href=link
+                Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+                )
+              }
+            });
+        });
+    });
+  </script>
+
   {{-- Twister Message JS Link --}}
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
