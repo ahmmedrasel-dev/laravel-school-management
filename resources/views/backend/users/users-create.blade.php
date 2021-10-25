@@ -25,7 +25,7 @@
           <div class="box-header with-border">
             <h4 class="box-title">Users Create</h4>
           </div>
-        <!-- /.box-header -->
+          <!-- /.box-header -->
           <div class="box-body">
             <div class="row">
               <div class="col">
@@ -85,7 +85,7 @@
                           <input name="password" type="password" class="form-control" placeholder="User Password"> 
                         </div>
 
-                         <span class="text-danger">
+                          <span class="text-danger">
                             @error('password')
                               {{ $message }}
                             @enderror
@@ -107,7 +107,7 @@
             </div>
             <!-- /.row -->
           </div>
-        <!-- /.box-body -->
+          <!-- /.box-body -->
         </div>
         <!-- /.box -->
       </section>

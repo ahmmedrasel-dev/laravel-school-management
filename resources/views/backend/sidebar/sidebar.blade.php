@@ -49,7 +49,7 @@
           </a>
           <ul class="treeview-menu">
             <li class="@yield('subprofile_active')"><a href="{{ route('users.profile.view') }}"><i class="ti-more"></i>Your Profile</a></li>
-            <li class="@yield('subpassword_active')"><a href="{{ route('users.create') }}"><i class="ti-more"></i>Change Password</a></li>
+            <li class="@yield('subpassword_active')"><a href="{{ route('users.password.change') }}"><i class="ti-more"></i>Change Password</a></li>
           </ul>
         </li> 
 		  

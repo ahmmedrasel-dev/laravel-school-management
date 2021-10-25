@@ -127,12 +127,16 @@
 				  <a href="#">View all</a>
 			  </li>
 			</ul>
-		  </li>	
+		  </li>
+      
+        {{-- @php
+          $authuser = DB::table('users')->where('id', Auth::user()->id )->first();
+        @endphp --}}
 		  
 	      <!-- User Account-->
           <li class="dropdown user user-menu">	
 			<a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown" title="User">
-				<img src="{{ asset('backend/assets/') }}/images/avatar/1.jpg" alt="">
+				<img src="{{ !empty( Auth::user()->images ) ? asset(Auth::user()->images) : asset('default_images/default.jpg') }}" alt="Profile thumbnail">
 			</a>
 			<ul class="dropdown-menu animated flipInX">
 			  <li class="user-body">
